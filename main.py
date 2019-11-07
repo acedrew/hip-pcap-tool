@@ -4,7 +4,7 @@ import json
 import time
 
 API_AUTH = {"X-API-Client-ID": os.environ['HIP_ID'], "X-API-Token": os.environ["HIP_KEY"]}
-CAPTURE_TIME = 1
+CAPTURE_TIME = int(os.environ.get('CAPTURE_TIME', 1))
 HIP_URL = os.environ['HIP_URL']
 
 if __name__ == "__main__":
